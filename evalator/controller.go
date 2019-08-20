@@ -7,9 +7,13 @@ type Lift struct {
 	CurrentFloor int
 }
 
-func (lift Lift) CheckLoadLimit() bool {
+func (lift Lift) checkLoadLimit() bool {
 	if lift.Weight > loadlimit {
 		return false
 	}
 	return true
+}
+
+func (lift Lift) checkIndicator(destinationFloor int) string {
+	return "Up"
 }
