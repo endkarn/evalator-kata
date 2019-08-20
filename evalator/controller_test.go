@@ -1,10 +1,13 @@
-package evalator
+package evalator_test
 
-import "testing"
+import (
+	"testing"
+	"evalator-kata/evalator"
+)
 
 func Test_CheckLoadLimit_Input_LiftWeight_1300_Should_Be_False(t *testing.T){
 	expected := false
-	lift := Lift{
+	lift := evalator.Lift{
 		Weight:1300,
 	}
 
@@ -17,7 +20,7 @@ func Test_CheckLoadLimit_Input_LiftWeight_1300_Should_Be_False(t *testing.T){
 
 func Test_CheckLoadLimit_Input_LiftWeight_1000_Should_Be_False(t *testing.T){
 	expected := false
-	lift := Lift{
+	lift := evalator.Lift{
 		Weight:1000,
 	}
 
@@ -30,7 +33,7 @@ func Test_CheckLoadLimit_Input_LiftWeight_1000_Should_Be_False(t *testing.T){
 
 func Test_CheckLoadLimit_Input_LiftWeight_900_Should_Be_True(t *testing.T){
 	expected := false
-	lift := Lift{
+	lift := evalator.Lift{
 		Weight:900,
 	}
 
