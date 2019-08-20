@@ -1,45 +1,45 @@
 package evalator_test
 
 import (
-	"testing"
 	"evalator-kata/evalator"
+	"testing"
 )
 
-func Test_CheckLoadLimit_Input_LiftWeight_1300_Should_Be_False(t *testing.T){
+func Test_CheckLoadLimit_Input_LiftWeight_1300_Should_Be_False(t *testing.T) {
 	expected := false
 	lift := evalator.Lift{
-		Weight:1300,
+		Weight: 1300,
 	}
 
 	actual := lift.CheckLoadLimit()
 
 	if expected != actual {
-		t.Errorf("Expected is %v but get %v",expected,actual)
+		t.Errorf("Expected is %v but get %v", expected, actual)
 	}
 }
 
-func Test_CheckLoadLimit_Input_LiftWeight_1000_Should_Be_False(t *testing.T){
-	expected := false
-	lift := evalator.Lift{
-		Weight:1000,
-	}
-
-	actual := lift.CheckLoadLimit()
-
-	if expected != actual {
-		t.Errorf("Expected is %v but get %v",expected,actual)
-	}
-}
-
-func Test_CheckLoadLimit_Input_LiftWeight_900_Should_Be_True(t *testing.T){
+func Test_CheckLoadLimit_Input_LiftWeight_1000_Should_Be_True(t *testing.T) {
 	expected := true
 	lift := evalator.Lift{
-		Weight:900,
+		Weight: 1000,
 	}
 
 	actual := lift.CheckLoadLimit()
 
 	if expected != actual {
-		t.Errorf("Expected is %v but get %v",expected,actual)
+		t.Errorf("Expected is %v but get %v", expected, actual)
+	}
+}
+
+func Test_CheckLoadLimit_Input_LiftWeight_900_Should_Be_True(t *testing.T) {
+	expected := true
+	lift := evalator.Lift{
+		Weight: 900,
+	}
+
+	actual := lift.CheckLoadLimit()
+
+	if expected != actual {
+		t.Errorf("Expected is %v but get %v", expected, actual)
 	}
 }
