@@ -10,7 +10,7 @@ func Test_CheckLiftControl_Input_Goto_5_Current_1_Weight_100_Should_Be_Up(t *tes
 		Weight:100,
 	}
 
-	actual := checkLiftControl(evalator)
+	actual := checkLiftControl(evaletor)
 
 	if expected != actual {
 		t.Errorf("Expected in %s but get %s",expected,actual)
