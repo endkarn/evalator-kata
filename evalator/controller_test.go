@@ -14,7 +14,7 @@ func Test_CheckLoadLimit_Input_LiftWeight_1300_Should_Be_False(t *testing.T){
 	actual := lift.CheckLoadLimit()
 
 	if expected != actual {
-		t.Errorf("Expected is %b but get %b",expected,actual)
+		t.Errorf("Expected is %v but get %v",expected,actual)
 	}
 }
 
@@ -27,12 +27,12 @@ func Test_CheckLoadLimit_Input_LiftWeight_1000_Should_Be_False(t *testing.T){
 	actual := lift.CheckLoadLimit()
 
 	if expected != actual {
-		t.Errorf("Expected is %b but get %b",expected,actual)
+		t.Errorf("Expected is %v but get %v",expected,actual)
 	}
 }
 
 func Test_CheckLoadLimit_Input_LiftWeight_900_Should_Be_True(t *testing.T){
-	expected := false
+	expected := true
 	lift := evalator.Lift{
 		Weight:900,
 	}
@@ -40,6 +40,6 @@ func Test_CheckLoadLimit_Input_LiftWeight_900_Should_Be_True(t *testing.T){
 	actual := lift.CheckLoadLimit()
 
 	if expected != actual {
-		t.Errorf("Expected is %b but get %b",expected,actual)
+		t.Errorf("Expected is %v but get %v",expected,actual)
 	}
 }
