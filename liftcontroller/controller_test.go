@@ -1,4 +1,4 @@
-package evalator_test
+package liftcontroller_test
 
 import "testing"
 
