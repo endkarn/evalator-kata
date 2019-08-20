@@ -2,7 +2,7 @@ package evalator_test
 
 import "testing"
 
-func Test_LiftGoToFloor_Input_Goto_5_Current_1_Weight_100_Should_Be_Up(t *testing.T){
+func Test_CheckLiftControl_Input_Goto_5_Current_1_Weight_100_Should_Be_Up(t *testing.T){
 	expected := "Up"
 	evaletor := evalator.Evalator{
 		GoToFloor:5,
